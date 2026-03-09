@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+/* Neural background utility */
+.neural-bg {
+  @apply bg-neural-pattern;
+  background-size: 80px 80px, 80px 80px, cover, cover;
+}
+
+.dark .neural-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,23,0.35), rgba(2,6,23,0.5));
+  pointer-events: none;
+}
+
+/* AOS helpers */
+[data-aos] {
+  will-change: opacity, transform;
+}
